@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+    background-image: url('fundo.jpg'); /* Adicione aqui o nome do arquivo da sua imagem local */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.5s ease;
+}
+
+.central-requisicoes-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.central-requisicoes-container h2 {
+    color: #333; /* Cor do título */
+    margin-bottom: 20px;
+    font-weight: 600; /* Peso da fonte para destacar o título */
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: slideIn 1s ease-in-out;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #003366; /* Cor azul escuro elegante */
+    color: white;
+}
+
+tr:hover {
+    background-color: rgba(0, 51, 102, 0.1); /* Fundo ao passar o mouse */
+    cursor: pointer;
+}
+
+/* Painel de Detalhes */
+.details {
+    display: none;
+    padding: 20px;
+    background-color: rgba(242, 242, 242, 0.9);
+    border-radius: 8px;
+}
+
+.details h2 {
+    color: #333;
+}
+
+/* Botões de Aprovação e Reprovação */
+button.approve {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button.reject {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button.approve:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button.reject:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+/* Botão Emitir Relatório */
+button {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #003366; /* Cor azul escuro */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #002244; /* Cor ao passar o mouse */
+    transform: scale(1.05);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

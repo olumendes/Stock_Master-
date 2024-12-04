@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Suprimentos - Aprovação de Requisições</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="central-requisicoes-container">
+        <h2>Aprovação de Requisições</h2>
+        
+        <!-- Filtros -->
+        <div class="filters">
+            <label>Departamento:
+                <select id="departmentFilter">
+                    <option value="">Todos</option>
+                    <option value="Compras">Compras</option>
+                    <option value="TI">TI</option>
+                    <option value="Financeiro">Financeiro</option>
+                </select>
+            </label>
+            <label>Status:
+                <select id="statusFilter">
+                    <option value="">Todos</option>
+                    <option value="Pendente">Pendente</option>
+                    <option value="Aprovado">Aprovado</option>
+                    <option value="Reprovado">Reprovado</option>
+                </select>
+            </label>
+            <button onclick="applyFilters()">Filtrar</button>
+        </div>
+        
+        <!-- Tabela de Requisições -->
+        <table id="requisicoes-table">
+            <thead>
+                <tr>
+                    <th>Número</th>
+                    <th>Data</th>
+                    <th>Departamento</th>
+                    <th>Item</th>
+                    <th>Quantidade</th>
+                    <th>Urgência</th>
+                    <th>Orçamento</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="requestsTable">
+                <!-- As linhas serão adicionadas dinamicamente -->
+            </tbody>
+        </table>
+
+        <!-- Botão para Emitir Relatório -->
+        <button onclick="window.location.href='../relatorios/relatorio.html'">Emitir Relatório</button> <!-- Caminho relativo ajustado -->
+        
+        <!-- Detalhes da Requisição -->
+        <div id="detailsPanel" class="details">
+            <h2>Detalhes da Requisição</h2>
+            <p><strong>Item:</strong> <span id="itemDetail"></span></p>
+            <p><strong>Justificativa:</strong> <span id="justificationDetail"></span></p>
+            <p><strong>Orçamento Disponível:</strong> <span id="budgetDetail"></span></p>
+            <button class="approve" onclick="approveRequest()">Aprovar</button>
+            <button class="reject" onclick="rejectRequest()">Reprovar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

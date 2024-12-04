@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Fonte elegante */
+    background-image: url('fundo.jpg'); /* Adicione aqui o nome do arquivo da sua imagem local */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.5s ease;
+}
+
+.central-requisicoes-container {
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: rgba(0, 51, 102, 0.3); /* Fundo azul escuro bem transparente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    color: white;
+}
+
+.logo {
+    max-width: 150px; /* Tamanho máximo da logo */
+    margin-bottom: 10px; /* Reduzir o espaço abaixo da logo */
+}
+
+.central-requisicoes-container h2 {
+    color: #ffffff; /* Cor do título */
+    margin-bottom: 10px; /* Reduzir o espaço abaixo do título */
+    font-weight: 600; /* Peso da fonte para destacar o título */
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd; /* Borda clara */
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo dos inputs com transparência */
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+#login-form input:focus {
+    border-color: #003366; /* Cor da borda ao focar */
+}
+
+#login-form button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #003366; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#login-form button:hover {
+    background-color: #002244; /* Cor do botão ao passar o mouse */
+    transform: scale(1.05);
+}
+
+.signup-link {
+    color: #ffc107; /* Cor do link de cadastro */
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+.forgot-password {
+    color: #ffc107; /* Cor mais visível para o link "Esqueci minha senha" */
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
